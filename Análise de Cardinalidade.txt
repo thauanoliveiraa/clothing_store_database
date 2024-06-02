@@ -1,0 +1,92 @@
+*Análise de Cardinalidade*
+
+>> Cliente:
+
+1. Cliente > Funcionario: 1 cliente só pode ser atendido por 1 funcionário
+
+2. Cliente > Compra: 1 cliente pode fazer N compras (mais de uma compra)
+
+3. Cliente > Sistema: N clientes podem ser cadastrados no sistema da loja (vários clientes podem ser cadastrados na loja, podem entrar na loja)
+
+4. Cliente > Cancelamento: 1 cliente pode cancelar N compras que ele fizer
+
+
+
+
+>> Compras:
+
+1. Compra > Produto: 1 compra pode conter N produtos (uma compra pode conter mais de um produto)
+
+2. Compra > Sistema: N compras podem ser cadastrados no sistema da loja (várias compras podem ser cadastradas / geradas na loja)
+
+3. Compra > Saldo em conta: N compras podem afetar o saldo da loja (várias compras podem ser realizadas na loja, o que afeta o saldo da loja)
+
+4. Compra > Cancelamento: 1 compra só pode ser cancelada 1 vez 
+
+
+
+
+
+>>  Produtos:
+
+1. Produto > Fornecedores: N produtos podem vir de 1 fornecedor (vários produtos podem ser providos / vendidos, por um único fornecedor)
+
+2. Produto > Sistema: N produtos podem ser cadastrados no sistema (vários produtos podem ser cadastrados no sistema)
+
+
+
+
+
+>> Cancelamentos: 
+
+1. Cancelamento > Sistema: N cancelamentos podem ser registrados no sistema (vários cancelamentos podem ser cadastrados no sistema)
+
+2. Cancelamento > Saldo em conta: N cancelamentos podem afetar o saldo da loja (várias cancelamentos podem ser realizados na loja, o que gera reembolso do dinheiro para o cliente, e afeta o saldo da loja)
+
+
+
+
+
+>> Saldo em conta (saldo da loja):
+
+1. Saldo em conta > Sistema: O saldo da loja afeta o sistema diretamente, está relacionado diretamente, depende diretamente do contexto ou funcionamento do sistema, e não pode existir sem ele
+
+
+
+
+>> Funcionário:
+
+1. Funcionario > Despesa: 1 funcionário, nesse sistema, só pode gerar 1 despesa para a loja (1 único funcionário só gera 1 única despesa para a loja)
+
+
+2. Funcionario > Sistema: N funcionários podem ser cadastrados no sistema (vários funcionários podem ser cadastrados no sistema)
+
+
+
+
+
+>> Fornecedores:
+
+1. Fornecedor > Despesa: 1 fornecedor pode gerar N despesas para a loja (1 único fornecedor, pode vender diversos produtos, o que gera várias despesas para a loja)
+
+2. Fornecedor > Sistema: N fornecedores podem ser cadastrados no sistema (vários funcionarios podem ser cadastrados no sistema)
+
+3. Fornecedor > Produtos: 1 fornecedor pode prover N produtos (1 único fornecedor pode vender vários produtos)
+
+
+
+
+
+>> Despesas:
+
+1. Despesas > Saldo em conta (saldo da loja): N despesas podem afetar diretamente o saldo da loja (várias despesas podem afetar / alterar o saldo da loja, realizando a diminuição do saldo)
+
+2. Despesas > Sistema: N despesas podem ser registradas no sistema (várias despesas podem ser registradas no sistema)
+
+
+>> Sistema: 
+
+1. O sistema possui uma relação direta com absolutamente todas as classes presentes nele
+
+
+ 

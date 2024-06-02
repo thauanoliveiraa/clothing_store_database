@@ -1,4 +1,4 @@
-# Sistema Gerenciador Financeiro e Gerenciador de Estoque (SGFGE)
+# 📊 Sistema Gerenciador Financeiro e Gerenciador de Estoque (SGFGE)
 
 ## 🌟 Idealização do Projeto
 

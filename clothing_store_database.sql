@@ -140,3 +140,60 @@ CREATE TABLE Solicitacoes_Troca (
     FOREIGN KEY (funcionario_id) REFERENCES Funcionarios(id)
 )COMMENT '';
 */
+
+INSERT INTO Fornecedores (CNPJ, nome, DESCRICAO) VALUES 
+('12.345.678/0001-90', 'Fornecedor A', 'Fornecedor de roupas casuais'),
+('23.456.789/0001-80', 'Fornecedor B', 'Fornecedor de roupas esportivas'),
+('34.567.890/0001-70', 'Fornecedor C', 'Fornecedor de roupas formais');
+
+INSERT INTO Produtos (nome, preco_de_venda, tamanho, cor, tipo_de_produto, fornecedor_id, preco_de_compra_fornecedor) VALUES 
+('Camiseta', 50.00, 'M', 'Azul', 'Camiseta', 1, 30.00),
+('Calça Jeans', 120.00, 'G', 'Preto', 'Calça', 2, 80.00),
+('Vestido', 200.00, 'P', 'Vermelho', 'Vestido', 3, 120.00),
+('Blusa', 75.00, 'M', 'Branco', 'Blusa', 1, 50.00),
+('Shorts', 60.00, 'P', 'Verde', 'Shorts', 2, 40.00);
+
+INSERT INTO Funcionarios (Nome, Salario, CPF) VALUES 
+('João da Silva', 3000.00, '123.456.789-10'),
+('Maria Oliveira', 3500.00, '234.567.890-20'),
+('Carlos Souza', 4000.00, '345.678.901-30'),
+('Ana Pereira', 3200.00, '456.789.012-40'),
+('Lucas Costa', 2800.00, '567.890.123-50');
+
+INSERT INTO Clientes (CPF, Nome, id_produto_comprado) VALUES 
+('789.012.345-60', 'Paula Lima', 1),
+('890.123.456-70', 'Fernando Alves', 2),
+('901.234.567-80', 'Juliana Martins', 3),
+('012.345.678-90', 'Roberto Gonçalves', 4),
+('123.456.789-00', 'Carla Nunes', 5);
+
+INSERT INTO Compras (forma_de_pagamento, data_de_compra, valor, descricao, cliente_id) VALUES 
+('Cartão de Crédito', '2024-01-15', 50.00, 'Compra de camiseta', 1),
+('Dinheiro', '2024-01-20', 120.00, 'Compra de calça jeans', 2),
+('Cartão de Débito', '2024-01-25', 200.00, 'Compra de vestido', 3),
+('Boleto', '2024-01-30', 75.00, 'Compra de blusa', 4),
+('Pix', '2024-02-05', 60.00, 'Compra de shorts', 5);
+
+INSERT INTO Despesas (descricao, valor) VALUES 
+('Pagamento de aluguel', 5000.00),
+('Compra de materiais de escritório', 300.00),
+('Manutenção de equipamentos', 150.00),
+('Pagamento de conta de luz', 800.00),
+('Marketing e publicidade', 2000.00);
+
+INSERT INTO Saldo_em_Conta (data, descricao, valor, tipo_transacao, saldo_atual) VALUES 
+('2024-01-01', 'Saldo inicial', 10000.00, 'lucro', 10000.00),
+('2024-01-15', 'Compra de camiseta', 50.00, 'lucro', 10050.00),
+('2024-01-20', 'Compra de calça jeans', 120.00, 'lucro', 10170.00),
+('2024-01-25', 'Compra de vestido', 200.00, 'lucro', 10370.00),
+('2024-01-30', 'Compra de blusa', 75.00, 'lucro', 10445.00),
+('2024-02-05', 'Compra de shorts', 60.00, 'lucro', 10505.00),
+('2024-02-10', 'Pagamento de aluguel', -5000.00, 'despesa', 5505.00),
+('2024-02-15', 'Compra de materiais de escritório', -300.00, 'despesa', 5205.00),
+('2024-02-20', 'Manutenção de equipamentos', -150.00, 'despesa', 5055.00),
+('2024-02-25', 'Pagamento de conta de luz', -800.00, 'despesa', 4255.00),
+('2024-02-28', 'Marketing e publicidade', -2000.00, 'despesa', 2255.00);
+
+INSERT INTO Cancelamento_compra (descricao, compras_id) VALUES 
+('Produto com defeito', 1),
+('Troca por tamanho errado', 3);

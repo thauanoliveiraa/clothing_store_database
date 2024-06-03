@@ -2,7 +2,9 @@
 
 ## 🌟 Idealização do Projeto
 
-<a href="https://docs.google.com/presentation/d/1ImoG3nhUriZNBXfOEuz4uWU0EWqq7jEwBx7tyl8M1eM/edit#slide=id.g2e21abd7fd9_0_23">Acesse aqui a apresentação em slide completa</a>
+<strong>🔗<a href="https://docs.google.com/presentation/d/1ImoG3nhUriZNBXfOEuz4uWU0EWqq7jEwBx7tyl8M1eM/edit#slide=id.g2e21abd7fd9_0_23">Acesse aqui a apresentação em slide completa</a></strong>
+<br>
+<br>
 <summary>📌 O que é para ser feito?</summary>
 <br>
 O objetivo principal é desenvolver um script SQL que realizará algumas atividades específicas. O intuito geral é usar o que foi aprendido em sala, desde o conceito de modelagem à utilização de chaves primárias e estrangeiras, com uma temática determinada. Nós propomos o pré-desenvolvimento de um sistema, utilizando linguagem de programação para realizar requisições no banco de dados.
